@@ -1,0 +1,12 @@
+.nav-bar {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    border-bottom: 6px solid black;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
