@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginWithSpotify from './components/api/authredirect';
-import Callback from './components/api/callback';
+import Callback from './components/api/auth/callback';
 import NavBar from './components/nav/navbar';
-import UserPlaylists from './components/api/userplaylists';
+import UserPlaylists from './components/api/get/userplaylists';
+import TopArtists from './components/api/get/topartists';
+import TopTracks from './components/api/get/toptracks';
 
 const App: React.FC = () => {
   return (
@@ -11,7 +12,6 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<div>
           <NavBar/>
-          <LoginWithSpotify/>
         </div>} />
         <Route path="/callback" element={<div>
           <NavBar/>
@@ -21,6 +21,16 @@ const App: React.FC = () => {
           <NavBar/>
           <UserPlaylists />
         </div>} />
+        <Route path="/artists" element={<div>
+          <NavBar/>
+          <TopArtists />
+        </div>} />
+        <Route path="/tracks" element={
+          <div>
+            <NavBar/>
+            <TopTracks/>
+          </div>
+        } />
       </Routes>
     </Router>
   );

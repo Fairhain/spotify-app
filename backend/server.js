@@ -14,6 +14,7 @@ const REDIRECT_URI = 'http://localhost:5173/callback';
 
 app.get('/getAccessToken', async (req, res) => {
   const code = req.query.code;
+  
   console.log(code);
   const fetch = (await import('node-fetch')).default;
 

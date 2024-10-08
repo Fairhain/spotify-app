@@ -13,7 +13,7 @@ const UserPlaylists: React.FC = () => {
 
   const fetchUserPlaylists = async (token: string) => {
     const url = 'https://api.spotify.com/v1/me/playlists';
-    
+
     try {
       const response = await fetch(url, {
         headers: {
@@ -38,7 +38,7 @@ const UserPlaylists: React.FC = () => {
       {playlists.length > 0 ? (
         <ul>
           {playlists.map((playlist) => (
-            <li key={playlist.id}>{playlist.name}</li>
+            <li key={playlist.id} >{playlist.name}</li>
           ))}
         </ul>
       ) : (
