@@ -5,6 +5,7 @@ import NavBar from './components/nav/navbar';
 import UserPlaylists from './components/api/get/userplaylists';
 import TopArtists from './components/api/get/topartists';
 import TopTracks from './components/api/get/toptracks';
+import WebPlayback from './components/api/webapiplayback/play';
 
 const App: React.FC = () => {
   return (
@@ -31,6 +32,13 @@ const App: React.FC = () => {
             <TopTracks/>
           </div>
         } />
+        <Route path="/player" element={
+          <div>
+            <NavBar/>
+            <WebPlayback/>
+          </div>
+        } />
+        
       </Routes>
     </Router>
   );

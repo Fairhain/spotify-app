@@ -8,7 +8,7 @@ const UserPlaylists: React.FC = () => {
   useEffect(() => {
     if (accessToken) {
       fetchUserPlaylists(accessToken);
-    }
+    } 
   }, [accessToken]);
 
   const fetchUserPlaylists = async (token: string) => {

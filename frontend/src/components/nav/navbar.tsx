@@ -5,13 +5,14 @@ const CLIENT_ID = 'cc0d6b182b0c47828f0fae661633ba7d';
 const REDIRECT_URI = 'http://localhost:5173/callback'; // Replace with your redirect URI
 const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
 const RESPONSE_TYPE = 'code';
-const SCOPES = 'user-read-private user-read-email playlist-read-private user-top-read';
+const SCOPES = 'streaming user-read-private user-read-email playlist-read-private user-top-read';
 
 const pages = [
     {name: 'Home', path: '/'},
     {name: 'Playlists', path: '/playlists'},
     {name: 'Artists', path: '/artists'},
-    {name: 'Tracks', path: '/tracks'}
+    {name: 'Tracks', path: '/tracks'},
+    {name: 'Web Player', path: '/player'}
 ]
 
 const NavBar: React.FC = () => {
